@@ -29,5 +29,5 @@ Users should be able to:
 ![alt text](screenshot-tailwind.png)
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/DSAW-2026-1/corte-ii-bootstrap-tailwind-Tomassave.git)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
