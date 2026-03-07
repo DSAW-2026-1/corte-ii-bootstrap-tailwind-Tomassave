@@ -1,32 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Tailwind | Stats preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap"
+      rel="stylesheet"
+    />
 
-  Get insights that help your business grow.
+    <title>Tailwind | Stats preview card component</title>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+    
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  10k+ companies
-  314 templates
-  12m+ queries
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              veryDarkBlue: "hsl(233, 47%, 7%)",
+              darkDesaturatedBlue: "hsl(244, 38%, 16%)",
+              softViolet: "hsl(277, 64%, 61%)",
+            },
+            fontFamily: {
+              inter: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+              lexend: ['Lexend Deca', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-veryDarkBlue text-white flex items-center justify-center px-6 font-inter">
+    <main class="w-full max-w-5xl">
+      <section
+        class="bg-darkDesaturatedBlue rounded-xl overflow-hidden flex flex-col-reverse lg:flex-row"
+      >
+        
+        <div class="lg:w-1/2 px-8 py-10 sm:px-10 sm:py-12 flex items-center">
+          <div>
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
+              Get
+              <span class="text-softViolet">insights</span>
+              that help your business grow.
+            </h1>
+            <p class="text-white/75 text-sm sm:text-base mb-8">
+              Discover the benefits of data analytics and make better decisions regarding revenue,
+              customer experience, and overall efficiency.
+            </p>
 
-  <div class="attribution">
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div class="flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-4">
+              <div>
+                <p class="text-2xl font-bold">10k+</p>
+                <p class="uppercase tracking-[0.2em] text-xs text-white/60 mt-1 font-lexend">
+                  companies
+                </p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold">314</p>
+                <p class="uppercase tracking-[0.2em] text-xs text-white/60 mt-1 font-lexend">
+                  templates
+                </p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold">12m+</p>
+                <p class="uppercase tracking-[0.2em] text-xs text-white/60 mt-1 font-lexend">
+                  queries
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="lg:w-1/2 relative">
+          <picture>
+            <source
+              srcset="./images/image-header-desktop.jpg"
+              media="(min-width: 1024px)"
+            />
+            <img
+              src="./images/image-header-mobile.jpg"
+              alt="People working in an office"
+              class="w-full h-full object-cover"
+            />
+          </picture>
+          <div class="absolute inset-0 bg-softViolet/60 mix-blend-multiply"></div>
+        </div>
+      </section>
+
+      <p class="text-center text-white/60 text-xs mt-4">
+        Built with <span class="font-semibold">Tailwind CSS</span>.
+      </p>
+    </main>
+  </body>
 </html>
